@@ -39,7 +39,7 @@ class ListHomeView extends StatelessWidget {
               children: [title, button],
             ),
           ),
-          Dimens.size_16.verticalSpace,
+          // Dimens.size_.verticalSpace,
           child,
         ],
       ),

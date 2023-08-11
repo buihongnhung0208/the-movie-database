@@ -1,13 +1,13 @@
 import 'package:base_scaffold/base_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:the_movie_database/presentation/common/card_item.dart';
 import 'package:the_movie_database/presentation/common/short_info_view.dart';
 import 'package:the_movie_database/resources/colors.dart';
 import 'package:the_movie_database/resources/dimens.dart';
 import 'package:the_movie_database/resources/resources.dart';
-
 
 import 'bloc/home_cubit.dart';
 
@@ -95,7 +95,7 @@ class _NewHomeScreenBodyState extends State<_NewHomeScreenBody> {
       ),
       button: GestureDetector(
         onTap: () {
-          // context.go('/popular');
+          context.go('/popular');
         },
         child: Row(
           mainAxisSize: MainAxisSize.min,

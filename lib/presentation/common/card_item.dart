@@ -16,29 +16,32 @@ class CardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: Dimens.size_120.w,
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10000.0),
-            child: CachedNetworkImage(
-              width: Dimens.size_120.w,
-              height: Dimens.size_200.h,
-              imageUrl: 'https://picsum.photos/250?image=9',
-              placeholder: (context, url) => const Center(
-                child: CircularProgressIndicator(),
-              ),
-              errorWidget: (context, url, error) => const Icon(
-                Icons.error,
+      child: Padding(
+        padding:  EdgeInsets.all(Dimens.size_2.w),
+        child: Column(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(Dimens.size_20.r),
+              child: CachedNetworkImage(
+                width: Dimens.size_120.w,
+                height: Dimens.size_200.h,
+                imageUrl: 'https://www.themoviedb.org/t/p/w188_and_h282_bestv2/9Mi8yPrkA0EefbVyE0CHs8tajsg.jpg',
+                placeholder: (context, url) => const Center(
+                  child: CircularProgressIndicator(),
+                ),
+                errorWidget: (context, url, error) => const Icon(
+                  Icons.error,
+                ),
               ),
             ),
-          ),
-          Text(
-            "Harry Potter và Hòn Đá Phù Thủy",
-            style: CoreResources.textStyles.inter.extraSmallTextMedium.copyWith(
-              color: Colors.white,
+            Text(
+              "Harry Potter và Hòn Đá Phù Thủy",
+              style: CoreResources.textStyles.inter.extraSmallTextMedium.copyWith(
+                color: Colors.white,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
